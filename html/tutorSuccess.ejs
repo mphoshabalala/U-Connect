@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head.ejs')%>
+<body class="success">
+        <form id="success-container" action="tLogin">
+           <img class="rotate primary-Icons" src="loading.png" alt="">
+           <img class="check primary-Icons" src="check.png" alt="">
+           <p class="success-story">Your Account Have been succesfully created</p>
+           <button type="submit" class="btn-tertiary" id="success-login">Login</button>
+        </form>
+   
+</body>
+<script>
+    //success
+    const rotate = document.querySelector('.rotate');
+    const check = document.querySelector('.check');
+    const successStory = document.querySelector('.success-story');
+    const successLogin = document.querySelector('#success-login');
+    const loginForm = document.querySelector('#login-from-success');
+
+    setTimeout(() => {
+        rotate.style.cssText = `display:none;`;
+        check.style.cssText = `display: flex`;
+        successStory.style.cssText = `display: flex`;
+        successLogin.style.cssText = `display: block`;
+    }, 2000);
+
+    successLogin.addEventListener('click', ()=> {
+        loginForm.style.cssText = `display: flex`;
+    });
+
+</script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('./partials/head.ejs')%>
+<body class="body" id="body">
+  <%-include('./partials/header.ejs')%>
+<!-- Hero -->
+<section class="hero">
+    <ul class="menu-Items"></ul>
+  </section>
+    <section class="posts" id="studentPosts" >
+        <div class="purchase-section">
+            <div class="purchase-container">
+                <h1>Get best Material and Books to Elevate your tutoring skills</h1>
+                <p>Unlock your full teaching potential with exclusive tutoring materials.</p>
+                <ul>
+                    <li><a href="#">Amazon Books</a></li>
+                    <li><a href="#">Takealot.com Books</a></li>
+                    <li><a href="#">Alibaba Books</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="posts-section" >
+            <!-- <h1>Posts</h1> -->
+            <div class="primary-searchBar">
+                <input class="inputs" type="text" placeholder="Search your subject, time , and topics ..." >
+                <li class="btn-secondary search">Search</li>   
+            </div>
+            <h2>Look into every tutor's desk and select the one that suits your learning style</h2>
+            <a href="#"  class="btn-tertiary" id="purchase">Want to become the tutor tutor? Get some helpful Material here!!!!</a>
+            <% if(posts.length > 0){ %>
+              <% posts.forEach(post => {%>
+                <div class="posts-Primary" id="userPost">
+                  <h3><%=post.tutor_name%>'s Post</h3>
+                    <ul>
+                        <li>Subject: <%=post.tutor_subjects%></li>
+                        <li>Topic: <%=post.tutor_topics%></li>
+                        <li>Available from: <%=post.tutor_available%></li>
+                        <li>Contacts: <%=post.tutor_contacts%></li>
+                        <li>Gmail: <%=post.tutor_gmail%></li>
+                        <li>About Me: <br><%=post.tutor_about%></li>
+                        <button type="submit" class="btn-tertiary"><%=post.tutor_name%>'s Desk</button>
+                    </ul>
+                </div>
+              <% })%>
+              <% } else { %>
+                <p>There are no posts yet to display</p>
+              <%}%>
+        </div>
+            
+            
+        
+    </section>
+    
+
+    <!-- <div id="footer-content"></div> -->
+    <!-- <%-include('./partials/footer.ejs')%> -->
+      
+</body>
+
+<script src="app.js"></script>
+
+</html>

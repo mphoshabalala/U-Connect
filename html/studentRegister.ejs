@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head.ejs')%>
+    <body class="form-body" id="register-body" >
+        <%-include('./partials/header.ejs')%>
+        <form class="primary-form" id="register" action="/student" method="POST">
+                <h1>Register</h1>
+                <h2>Personal Details</h2>
+                <input class="inputs" name="firstname" type="text" placeholder=" Firstname here..." required>
+                <input class="inputs" name="lastname"type="text" placeholder=" Lastname here... " required> 
+                <input class="inputs" name="country"type="text" placeholder=" Country here..." required>
+                <input class="inputs" name="password"type="password" placeholder="Password..." required> 
+                <input class="inputs" name="confirm_password"type="password" placeholder="confirm password..." required>
+                <h2 >Learning Information</h2>
+                <div class="form-notice">
+                    <p>Please note that this information will be posted in 
+                    the Student Posts page for tutors to find you, you can go to that page and edit it however you want</p>
+                </div>
+                <input class="inputs"  type="text" name="subjects" placeholder="subject" required>
+                <input class="inputs"  type="text" name="topics" placeholder="topic(s) e.g. Algebra, Calculus,..." required>
+                <input class="inputs" name="available" type="text" placeholder="Availability e.g. 08-00 to 10-00" required>
+                <input class="inputs" name="contacts" type="number" placeholder="contacts, e.g. +27 1 234 5678" required>
+                <input class="inputs" name="gmail"type="email" placeholder="Gmail here..." required> 
+                <textarea class="inputs" name="about" id="" cols="30" rows="10" placeholder="About yourself (50 Words Max)"></textarea>
+                <button type="submit" class="btn-tertiary">Submit </button>
+        </form>
+</body>
+<script src="app.js"></script>
+</html>

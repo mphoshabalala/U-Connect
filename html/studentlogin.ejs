@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head.ejs')%>
+<body class="form-body">
+    
+        <form class="primary-form" id="main-login-from" action="/studentLogin" method="post">
+            <h1>Login</h1>
+            <img class="primary-Icons" style="height: 2rem;" src="user.png" alt="">
+            <p style="color: red;
+                      z-index: 100;"><%= errorMessage%></p>
+            <input placeholder="gmail" name="gmail" class="inputs" type="email">
+            <input placeholder="password" name="password" class="inputs" type="password">
+            <button class="btn-tertiary" type="submit">Submit</button>
+            <ul class="secondary-ul" id="create-Account-forgot-gmail">
+                <li><a href="/studentRegister">create account</a></li>
+                <li>/</li>
+                <li><a href="#">fogort password?</a></li>
+            </ul>
+            
+        </form>
+    <!-- <%-include('./partials/footer.ejs')%> -->
+   
+</body>
+
+</html>
+

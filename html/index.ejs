@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('./partials/head.ejs')%>
+<body class="body" id="body">
+  <!-- Header section -->
+  <%-include('./partials/header2.ejs')%>
+<!-- Hero -->
+    <section class="hero">
+      <ul class="menu-Items"></ul>
+        <div class="hero-content">
+            <h1>Welcome To UConnect</h1>
+            <p>Harnessing the collective genius for groundbreaking solutions.</p>
+            <a href="#learn" class="btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <section class="offers" id="offers" >
+        <h1>Discover Our Offers</h1>
+        <div class="offers-section" >
+            <a  href="/studentRegister" class="card-primary" id="learn">
+              <h3>Register To Start Learning</h3>
+              <p class="primary-paragraph">Access our comprehensive learning materials and courses to enhance your knowledge and skills.</p>
+            </a>
+            <a href="/tutorRegister" class="card-primary" id="tutor">
+                <h3>Register To Become A Tutor</h3>
+                <p class="primary-paragraph">Join our workforce to share your skills by teaching and earning.</p>            </a>
+              <a href="#" class="card-primary" id="collab">
+                <h3>Collaborative Platform</h3>
+                <p class="primary-paragraph">Join our collaborative platform to connect with like-minded individuals and work on exciting projects together.</p>              </a>
+          </div>
+    </section>
+    
+
+    <div id="footer-content"></div>
+   <%-include('./partials/footer.ejs')%>
+      
+</body>
+
+<script src="app.js"></script>
+</html>

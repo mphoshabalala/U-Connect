@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('./partials/head.ejs')%>
+<<body class="body" id="posts-body body" >
+  <%-include('./partials/header.ejs')%>
+  <ul class="menu-Items"></ul>
+
+<section class="">
+    <ul class="menu-Items"></ul>
+  </section>
+    <section class="posts" id="studentPosts" >
+        <div class="purchase-section">
+            <div class="purchase-container">
+                <h1>Study Materials To Purchase</h1>
+                <p>Unlock your full academic potential with exclusive study materials.</p>
+                <ul>
+                    <li><a href="#">Amazon Books</a></li>
+                    <li><a href="#">Takealot.com Books</a></li>
+                    <li><a href="#">Alibaba Books</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="posts-section" >
+            <!-- <h1>Posts</h1> -->
+            <div class="primary-searchBar">
+              <input class="inputs" type="text" placeholder="Search your subject, time , and topics ..." >
+              <li class="btn-secondary search">Search</li>   
+          </div>
+            <!-- <div class="card-primary  posts-Primary" id="userPost">
+              <h3>My Post</h3>
+                <ul>
+                    <li>Subject: English</li>
+                    <li>Topic: Essay Writing</li>
+                    <li>Available from: 08-00 to 10:00</li>
+                    <li>About Me: <br>I am a person who is commited to his studies and I like asking questions to understand</li>
+                </ul>
+              <div>
+                <a href="#"  class="btn-tertiary" id="edit">Edit</a>
+                <a href="#"  class="btn-tertiary" id="delete">delete</a>
+              </div>
+            </div> -->
+            <a href="#"  class="btn-tertiary" id="purchase">Purchase Study Material Wth Us NOW!!!! Here</a>
+            
+            <% if(posts.length > 0){ %>
+              <% posts.forEach(post => {%>
+                <div class="posts-Primary" id="userPost">
+                  <h3><%=post.student_name%>'s Post</h3>
+                    <ul>
+                        <li>Subject: <%=post.student_subjects%></li>
+                        <li>Topic: <%=post.student_topics%></li>
+                        <li>Available from: <%=post.student_available%></li>
+                        <li>Contacts: <%=post.student_contacts%></li>
+                        <li>Gmail: <%=post.student_gmail%></li>
+                        <li>About Me: <br><%=post.student_about%></li>
+                    </ul>
+                </div>
+              <% })%>
+              <% } else { %>
+                <p>There are no posts yet to display</p>
+              <%}%>
+            
+        </div>
+            
+            
+        
+    </section>
+    
+
+    <!-- <div id="footer-content"></div> -->
+    <!-- <%-include('./partials/footer.ejs')%> -->
+      
+</body>
+
+<script src="app.js"></script>
+
+<!-- <script src="../js/app2.js"></script> -->
+</html>
