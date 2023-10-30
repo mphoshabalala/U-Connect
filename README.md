@@ -23,8 +23,6 @@ U-Connect is a website designed to help tutors and students collaborate on the i
 
 - Node JS.
 - Express JS
-- Vanilla JS(ES6)
-- HTML 5,
 - CSS3
 - mySQL Database
 - EJS templating
